@@ -1,11 +1,4 @@
 {
-  "routes": [
-    {
-      "route": "/",
-      "redirect": "https://www.shendao.bg",
-      "statusCode": 301
-    }
-  ],
   "globalHeaders": {
     "X-Frame-Options": "DENY",
     "X-Content-Type-Options": "nosniff"
