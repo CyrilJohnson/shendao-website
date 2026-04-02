@@ -1,86 +1,425 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shendao</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f7;
-      color: #2c3e50;
-    }
-    header {
-      background: linear-gradient(to right, #2c3e50, #4ca1af);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 48px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    .services {
-      display: grid;
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: #27ae60;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
+  <meta
+    name="description"
+    content="Shendao - акупресура, Тай-Чи, Цигун и семинари за баланс, движение и вътрешна хармония."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: "#f6f8f4",
+              100: "#e9efe4",
+              200: "#d3dfca",
+              300: "#b4c8ac",
+              400: "#8daa85",
+              500: "#6e8f67",
+              600: "#56724f",
+              700: "#445b3f",
+              800: "#394b35",
+              900: "#313f2e"
+            },
+            sand: {
+              50: "#fdfbf7",
+              100: "#f8f2e7",
+              200: "#f1e4cb",
+              300: "#e8d3a7",
+              400: "#ddbb79",
+              500: "#d1a257",
+              600: "#bf8846",
+              700: "#9f6b39",
+              800: "#835733",
+              900: "#6b492d"
+            }
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,0.08)"
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-<header>
-  <h1>Shendao</h1>
-  <p>Път към баланс, движение и вътрешна хармония</p>
-  <a class="btn" href="#">Запази час</a>
-</header>
-
-<section>
-  <h2>Нашите услуги</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Индивидуални сесии</h3>
-      <p>Персонален подход за баланс и отпускане</p>
+<body class="bg-stone-50 text-stone-800 antialiased">
+  <header class="relative overflow-hidden bg-gradient-to-br from-sage-900 via-sage-800 to-sage-700 text-white">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute -left-16 top-10 h-72 w-72 rounded-full bg-white blur-3xl"></div>
+      <div class="absolute right-0 top-0 h-96 w-96 rounded-full bg-sand-200 blur-3xl"></div>
     </div>
-    <div class="card">
-      <h3>Тай-чи</h3>
-      <p>Практика за движение, концентрация и хармония</p>
-    </div>
-    <div class="card">
-      <h3>Цигун</h3>
-      <p>Дишане, движение и вътрешна енергия</p>
-    </div>
-    <div class="card">
-      <h3>Семинари</h3>
-      <p>Тематични събития и обучения</p>
-    </div>
-  </div>
-</section>
 
-<section>
-  <h2>Контакти</h2>
-  <p>Свържете се с нас за повече информация или записване на час</p>
-</section>
+    <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <div class="text-2xl font-semibold tracking-wide">Shendao</div>
+      <div class="hidden gap-8 text-sm md:flex">
+        <a href="#about" class="transition hover:text-sand-200">За нас</a>
+        <a href="#services" class="transition hover:text-sand-200">Услуги</a>
+        <a href="#seminars" class="transition hover:text-sand-200">Семинари</a>
+        <a href="#contact" class="transition hover:text-sand-200">Контакти</a>
+      </div>
+    </nav>
 
+    <div class="relative mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-10 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-16">
+      <div class="flex flex-col justify-center">
+        <p class="mb-4 text-sm uppercase tracking-[0.25em] text-sand-200">
+          Баланс • Движение • Хармония
+        </p>
+        <h1 class="max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+          Път към по-спокойно тяло и по-ясен ум
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-stone-100/90">
+          Акупресура, Тай-Чи, Цигун и тематични семинари, насочени към
+          вътрешен баланс, осъзнато движение и цялостно благополучие.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-stone-900 shadow-soft transition hover:bg-sand-300"
+          >
+            Запази час
+          </a>
+          <a
+            href="#services"
+            class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+          >
+            Разгледай услугите
+          </a>
+        </div>
+
+        <div class="mt-10 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+            <div class="text-2xl font-semibold">1:1</div>
+            <div class="mt-1 text-sm text-stone-100/80">Индивидуални сесии</div>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+            <div class="text-2xl font-semibold">Тай-Чи</div>
+            <div class="mt-1 text-sm text-stone-100/80">Практики за баланс</div>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+            <div class="text-2xl font-semibold">Цигун</div>
+            <div class="mt-1 text-sm text-stone-100/80">Дишане и енергия</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <div class="w-full max-w-xl rounded-[2rem] border border-white/20 bg-white/10 p-4 shadow-soft backdrop-blur">
+          <div class="rounded-[1.5rem] bg-gradient-to-br from-sand-100 via-white to-sage-100 p-8 text-stone-800">
+            <div class="mb-6 inline-flex rounded-full bg-sage-100 px-4 py-1 text-sm font-medium text-sage-800">
+              Спокойствие и осъзнатост
+            </div>
+            <h2 class="text-2xl font-semibold text-sage-900">
+              Пространство за възстановяване и вътрешен баланс
+            </h2>
+            <p class="mt-4 leading-7 text-stone-700">
+              Подход, който съчетава традиционни практики и внимателна работа с
+              тялото, дишането и движението. Подходящ за хора, които търсят
+              по-мек, естествен и осъзнат ритъм.
+            </p>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-sage-800">Индивидуален подход</div>
+                <p class="mt-2 text-sm leading-6 text-stone-600">
+                  Всяка сесия и практика се съобразява с нуждите на човека.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-sage-800">Спокойна среда</div>
+                <p class="mt-2 text-sm leading-6 text-stone-600">
+                  Пространство за отпускане, внимание и вътрешно подреждане.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+          За Shendao
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+          Холистичен подход към благополучието
+        </h2>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-stone-600">
+          Shendao предлага практики и занимания, насочени към по-добро физическо,
+          емоционално и вътрешно равновесие. Работата включва индивидуални сесии,
+          Тай-Чи, Цигун и семинари по различни теми и в различни периоди от
+          годината.
+        </p>
+        <p class="mt-4 max-w-3xl leading-8 text-stone-600">
+          Идеята е да се създаде пространство, в което човек да възстанови
+          контакта със себе си, да намали напрежението и да развие по-добро
+          усещане за баланс, присъствие и жизненост.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="rounded-3xl bg-white p-6 shadow-soft">
+          <div class="mb-3 inline-flex rounded-full bg-sage-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sage-800">
+            Баланс
+          </div>
+          <p class="leading-7 text-stone-600">
+            Практики, които насърчават вътрешна стабилност и по-спокоен ритъм.
+          </p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-soft">
+          <div class="mb-3 inline-flex rounded-full bg-sand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sand-800">
+            Движение
+          </div>
+          <p class="leading-7 text-stone-600">
+            Осъзнато и плавно движение, подходящо за различни възрасти.
+          </p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-soft">
+          <div class="mb-3 inline-flex rounded-full bg-sage-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sage-800">
+            Дишане
+          </div>
+          <p class="leading-7 text-stone-600">
+            Техники за внимание, успокояване и по-добро усещане за присъствие.
+          </p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-soft">
+          <div class="mb-3 inline-flex rounded-full bg-sand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sand-800">
+            Осъзнатост
+          </div>
+          <p class="leading-7 text-stone-600">
+            Подкрепа за по-дълбок контакт с тялото, ума и вътрешния баланс.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+          Услуги
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+          Практики и занимания, насочени към естествено благополучие
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+          <div class="mb-4 text-3xl">👐</div>
+          <h3 class="text-xl font-semibold text-stone-900">Акупресура</h3>
+          <p class="mt-4 leading-7 text-stone-600">
+            Индивидуални сесии, насочени към отпускане, баланс и подкрепа на
+            общото състояние на тялото.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+          <div class="mb-4 text-3xl">☯️</div>
+          <h3 class="text-xl font-semibold text-stone-900">Тай-Чи</h3>
+          <p class="mt-4 leading-7 text-stone-600">
+            Практика за хармония, плавно движение, концентрация и вътрешна
+            стабилност.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+          <div class="mb-4 text-3xl">🌿</div>
+          <h3 class="text-xl font-semibold text-stone-900">Цигун</h3>
+          <p class="mt-4 leading-7 text-stone-600">
+            Система от движение, дишане и внимание, насочена към жизненост и
+            вътрешен баланс.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+          <div class="mb-4 text-3xl">📚</div>
+          <h3 class="text-xl font-semibold text-stone-900">Семинари</h3>
+          <p class="mt-4 leading-7 text-stone-600">
+            Тематични събития и практически занимания с различна насоченост през
+            годината.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="seminars" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div class="rounded-[2rem] bg-gradient-to-r from-sage-50 to-sand-50 p-8 shadow-soft sm:p-10 lg:p-12">
+      <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+            Семинари и събития
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+            Пространство за учене, практика и лична работа
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-stone-600">
+            Програмата може да включва въвеждащи занимания, практики за
+            начинаещи, тематични уикенд семинари и специализирани събития.
+          </p>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="rounded-3xl bg-white p-6 shadow-soft">
+            <div class="text-sm font-semibold uppercase tracking-wider text-sage-700">
+              Предстоящ формат
+            </div>
+            <h3 class="mt-2 text-xl font-semibold text-stone-900">
+              Въведение в Цигун
+            </h3>
+            <p class="mt-3 leading-7 text-stone-600">
+              Подходящо за хора, които искат да започнат с основни движения,
+              дишане и вътрешно успокояване.
+            </p>
+          </div>
+
+          <div class="rounded-3xl bg-white p-6 shadow-soft">
+            <div class="text-sm font-semibold uppercase tracking-wider text-sage-700">
+              Практика
+            </div>
+            <h3 class="mt-2 text-xl font-semibold text-stone-900">
+              Тай-Чи за начинаещи
+            </h3>
+            <p class="mt-3 leading-7 text-stone-600">
+              Плавни движения, стабилност, внимание и усещане за по-добра връзка
+              с тялото.
+            </p>
+          </div>
+
+          <div class="rounded-3xl bg-white p-6 shadow-soft">
+            <div class="text-sm font-semibold uppercase tracking-wider text-sage-700">
+              Специално събитие
+            </div>
+            <h3 class="mt-2 text-xl font-semibold text-stone-900">
+              Семинар за баланс и осъзнато движение
+            </h3>
+            <p class="mt-3 leading-7 text-stone-600">
+              Комбиниран формат с практика, насоки и пространство за по-дълбока
+              лична работа.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-sage-900 text-white">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sand-200">
+            Започнете днес
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">
+            Направете първа стъпка към повече баланс и вътрешна яснота
+          </h2>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-stone-200">
+            Свържете се за въпроси, информация за предстоящи занимания или
+            запазване на индивидуален час.
+          </p>
+        </div>
+        <div>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-stone-900 shadow-soft transition hover:bg-sand-300"
+          >
+            Свържи се с нас
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+          Контакти
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+          Запитвания и записване
+        </h2>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-stone-600">
+          За информация относно индивидуални сесии, практики, семинари и график,
+          свържете се с нас по удобен за вас начин.
+        </p>
+
+        <div class="mt-8 space-y-4">
+          <div class="rounded-2xl bg-white p-5 shadow-soft">
+            <div class="text-sm font-semibold text-sage-800">Телефон</div>
+            <div class="mt-2 text-stone-600">+359 XX XXX XXXX</div>
+          </div>
+          <div class="rounded-2xl bg-white p-5 shadow-soft">
+            <div class="text-sm font-semibold text-sage-800">Имейл</div>
+            <div class="mt-2 text-stone-600">contact@shendao.bg</div>
+          </div>
+          <div class="rounded-2xl bg-white p-5 shadow-soft">
+            <div class="text-sm font-semibold text-sage-800">Локация</div>
+            <div class="mt-2 text-stone-600">София, България</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] bg-white p-6 shadow-soft sm:p-8">
+        <h3 class="text-2xl font-semibold text-stone-900">Изпрати запитване</h3>
+        <form class="mt-6 space-y-4">
+          <div>
+            <label class="mb-2 block text-sm font-medium text-stone-700">Име</label>
+            <input
+              type="text"
+              placeholder="Вашето име"
+              class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-medium text-stone-700">Имейл</label>
+            <input
+              type="email"
+              placeholder="Вашият имейл"
+              class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-medium text-stone-700">Съобщение</label>
+            <textarea
+              rows="5"
+              placeholder="Напишете вашето запитване"
+              class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            class="inline-flex w-full items-center justify-center rounded-2xl bg-sage-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sage-800"
+          >
+            Изпрати запитване
+          </button>
+
+          <p class="text-sm leading-6 text-stone-500">
+            Формата е примерна за демонстрационната версия на сайта.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-stone-200 bg-stone-50">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div>© 2026 Shendao. Всички права запазени.</div>
+      <div>Акупресура • Тай-Чи • Цигун • Семинари</div>
+    </div>
+  </footer>
 </body>
 </html>
