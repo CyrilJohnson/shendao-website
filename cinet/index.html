@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Програма ЦиНет | Shendao</title>
+  <meta
+    name="description"
+    content="Програма ЦиНет от Shendao – информация, приложение, модули и начин за включване."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: "#f6f8f4",
+              100: "#e9efe4",
+              200: "#d3dfca",
+              300: "#b4c8ac",
+              400: "#8daa85",
+              500: "#6e8f67",
+              600: "#56724f",
+              700: "#445b3f",
+              800: "#394b35",
+              900: "#313f2e"
+            },
+            sand: {
+              50: "#fdfbf7",
+              100: "#f8f2e7",
+              200: "#f1e4cb",
+              300: "#e8d3a7",
+              400: "#ddbb79",
+              500: "#d1a257",
+              600: "#bf8846",
+              700: "#9f6b39",
+              800: "#835733",
+              900: "#6b492d"
+            }
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,0.08)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+  <header class="relative overflow-hidden bg-gradient-to-br from-sage-900 via-sage-800 to-sage-700 text-white">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute -left-16 top-10 h-72 w-72 rounded-full bg-white blur-3xl"></div>
+      <div class="absolute right-0 top-0 h-96 w-96 rounded-full bg-sand-200 blur-3xl"></div>
+    </div>
+
+    <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <a href="/" class="text-2xl font-semibold tracking-wide">Shendao</a>
+      <div class="flex gap-6 text-sm">
+        <a href="/" class="transition hover:text-sand-200">Начало</a>
+        <a href="/gallery/" class="transition hover:text-sand-200">Галерия</a>
+        <a href="#contact" class="transition hover:text-sand-200">Контакти</a>
+      </div>
+    </nav>
+
+    <div class="relative mx-auto grid max-w-7xl gap-10 px-6 pb-16 pt-10 lg:grid-cols-2 lg:px-8 lg:pb-20 lg:pt-12">
+      <div class="flex flex-col justify-center">
+        <p class="mb-4 text-sm uppercase tracking-[0.25em] text-sand-200">
+          Програма ЦиНет
+        </p>
+        <h1 class="max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl">
+          Възможност за работа от разстояние
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-100/90">
+          Програма, представена като решение за хора, които нямат възможност да
+          посетят центъра на място, но търсят подкрепа, насока и възможност за
+          включване от разстояние.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="#modules"
+            class="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-stone-900 shadow-soft transition hover:bg-sand-300"
+          >
+            Виж модулите
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+          >
+            Свържи се с нас
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <div class="w-full max-w-xl rounded-[2rem] border border-white/20 bg-white/10 p-4 shadow-soft backdrop-blur">
+          <div class="rounded-[1.5rem] bg-gradient-to-br from-sand-100 via-white to-sage-100 p-8 text-stone-800">
+            <div class="mb-6 inline-flex rounded-full bg-sage-100 px-4 py-1 text-sm font-medium text-sage-800">
+              От разстояние
+            </div>
+            <h2 class="text-2xl font-semibold text-sage-900">
+              Подход за хора извън София, Варна или извън страната
+            </h2>
+            <p class="mt-4 leading-7 text-stone-700">
+              Старият сайт представя програмата като форма на включване за хора,
+              които по една или друга причина не могат да дойдат на място, както и
+              за случаи, при които се търси продължаване на започнат процес.
+            </p>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-sage-800">Краткосрочни модули</div>
+                <p class="mt-2 text-sm leading-6 text-stone-600">
+                  Вариант за кратък интензивен период.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-sage-800">Дългосрочни модули</div>
+                <p class="mt-2 text-sm leading-6 text-stone-600">
+                  Вариант за по-дълъг период с последователно включване.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <div class="rounded-[2rem] bg-white p-8 shadow-soft sm:p-10">
+        <h2 class="text-3xl font-semibold text-stone-900">Как е представена програмата</h2>
+        <div class="mt-6 space-y-5 text-lg leading-8 text-stone-600">
+          <p>
+            Според текста в стария сайт програмата е създадена за случаи, в които
+            човек има нужда от помощ, но няма възможност да посети центъра лично.
+          </p>
+          <p>
+            Представена е и като възможност за продължаване на вече започнат
+            възстановителен процес при отсъствие, пътуване или други ангажименти.
+          </p>
+          <p>
+            В страницата се посочва, че „ЦиНет“ е разработена като програма за
+            включване от разстояние и е описана като достъпна за хора от различни
+            населени места и държави.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+            Подходяща при
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+            Основни посоки на приложение
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Здравословни проблеми</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              В стария текст са посочени краткотрайни неразположения или състояния,
+              изискващи по-дълъг възстановителен процес.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Стрес и напрежение</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              Описани са състояния като стрес, психически травми, безсъние,
+              напрежение и нужда от емоционална стабилизация.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Концентрация и учене</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              Страницата включва и приложение при концентрация, памет и подготовка
+              на ученици и студенти.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Спортна подготовка</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              Посочена е и подкрепа при физическа и психическа подготовка на
+              спортисти преди състезания.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Бизнес и изява</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              В стария сайт програмата е представена и като насочена към успешни
+              срещи, презентации и професионална мобилизация.
+            </p>
+          </article>
+
+          <article class="rounded-3xl border border-stone-100 bg-stone-50 p-6 shadow-soft">
+            <h3 class="text-xl font-semibold text-stone-900">Други специфични нужди</h3>
+            <p class="mt-4 leading-7 text-stone-600">
+              Добавена е и отворена възможност за други индивидуални случаи и
+              потребности.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="rounded-[2rem] bg-gradient-to-r from-sage-50 to-sand-50 p-8 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+            Модули
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900">
+            Краткосрочен модул
+          </h2>
+          <p class="mt-5 leading-8 text-stone-600">
+            В стария сайт е описан 3-дневен модул с интензивно включване през деня,
+            като при нужда може да бъде повторен.
+          </p>
+          <div class="mt-6 rounded-2xl bg-white p-5 shadow-soft">
+            <div class="text-sm font-semibold text-sage-800">Посочена цена</div>
+            <div class="mt-2 text-stone-600">60 лв. общо</div>
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] bg-white p-8 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+            Модули
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900">
+            Дългосрочен модул
+          </h2>
+          <p class="mt-5 leading-8 text-stone-600">
+            Описан е и 10-дневен модул с включване по зададен ритъм и възможност за
+            продължаване след нова заявка.
+          </p>
+          <div class="mt-6 rounded-2xl bg-stone-50 p-5">
+            <div class="text-sm font-semibold text-sage-800">Посочена цена</div>
+            <div class="mt-2 text-stone-600">200 лв. общо</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sage-900 text-white">
+      <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sand-200">
+            Включване
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">
+            Какво е нужно за заявка
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-stone-200">
+            В стария сайт е публикувана анкетна карта с данни за състоянието,
+            контактите и кратка информация за човека, както и указание да се
+            изпрати актуална снимка и потвърждение след плащане.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div class="font-semibold">Лични данни</div>
+            <p class="mt-2 text-sm leading-6 text-stone-200">
+              Име, възраст, местоживеене и контакт.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div class="font-semibold">Описание на състоянието</div>
+            <p class="mt-2 text-sm leading-6 text-stone-200">
+              Оплаквания, диагноза, история и приложено до момента лечение.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div class="font-semibold">Снимка</div>
+            <p class="mt-2 text-sm leading-6 text-stone-200">
+              Актуална електронна снимка според указанията на страницата.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+            <div class="font-semibold">Потвърждение</div>
+            <p class="mt-2 text-sm leading-6 text-stone-200">
+              Имейл или SMS след плащане, за да стартира програмата.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage-700">
+            Контакти
+          </p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900 sm:text-4xl">
+            Свържете се за повече информация
+          </h2>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-stone-600">
+            Ако искате да попитате за възможностите на програмата, най-добре е да
+            се свържете директно с центъра.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="rounded-2xl bg-white p-5 shadow-soft">
+              <div class="text-sm font-semibold text-sage-800">Кабинет София</div>
+              <div class="mt-2 text-stone-600">ул. „Стефан Караджа“ № 7, вх. В, партер</div>
+              <div class="mt-1 text-stone-500">Понеделник – петък, 9:00 – 18:00</div>
+            </div>
+            <div class="rounded-2xl bg-white p-5 shadow-soft">
+              <div class="text-sm font-semibold text-sage-800">Кабинет Варна</div>
+              <div class="mt-2 text-stone-600">ул. „Ген. Радко Димитриев“ № 7, ет. 2</div>
+              <div class="mt-1 text-stone-500">Работно време: по уговорка</div>
+            </div>
+            <div class="rounded-2xl bg-white p-5 shadow-soft">
+              <div class="text-sm font-semibold text-sage-800">Телефон за записване</div>
+              <div class="mt-2 text-stone-600">088 7 304 122</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] bg-white p-6 shadow-soft sm:p-8">
+          <h3 class="text-2xl font-semibold text-stone-900">Бързо запитване</h3>
+          <form class="mt-6 space-y-4">
+            <div>
+              <label class="mb-2 block text-sm font-medium text-stone-700">Име</label>
+              <input
+                type="text"
+                placeholder="Вашето име"
+                class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+              />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-sm font-medium text-stone-700">Имейл</label>
+              <input
+                type="email"
+                placeholder="Вашият имейл"
+                class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+              />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-sm font-medium text-stone-700">Съобщение</label>
+              <textarea
+                rows="5"
+                placeholder="Напишете вашето запитване"
+                class="w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-sage-400"
+              ></textarea>
+            </div>
+
+            <button
+              type="button"
+              class="inline-flex w-full items-center justify-center rounded-2xl bg-sage-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sage-800"
+            >
+              Изпрати запитване
+            </button>
+
+            <p class="text-sm leading-6 text-stone-500">
+              Формата е примерна за текущата версия на сайта.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-stone-200 bg-stone-50">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div>© 2026 Shendao. Всички права запазени.</div>
+      <div>Програма ЦиНет • Работа от разстояние • Контакти</div>
+    </div>
+  </footer>
+
+</body>
+</html>
