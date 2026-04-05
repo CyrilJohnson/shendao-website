@@ -47,6 +47,7 @@
     };
   </script>
 </head>
+
 <body class="bg-stone-50 text-stone-800 antialiased">
 
   <header class="relative overflow-hidden bg-gradient-to-br from-sage-900 via-sage-800 to-sage-700 text-white">
@@ -60,17 +61,95 @@
       <div class="absolute right-0 top-0 h-96 w-96 rounded-full bg-sand-200 blur-3xl"></div>
     </div>
 
-    <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-      <div class="text-2xl font-semibold tracking-wide">Shendao</div>
-      <div class="hidden gap-8 text-sm md:flex">
-        <a href="#about" class="transition hover:text-sand-200">За центъра</a>
-        <a href="#directions" class="transition hover:text-sand-200">Направления</a>
-        <a href="#programs" class="transition hover:text-sand-200">Програми</a>
-        <a href="#schedule" class="transition hover:text-sand-200">График</a>
-        <a href="/gallery/" class="text-gray-700 hover:text-blue-600">Галерия</a>
-        <a href="#contact" class="transition hover:text-sand-200">Контакти</a>
+<nav class="relative z-20 mx-auto max-w-7xl px-6 py-5 lg:px-8">
+  <div class="flex items-center justify-between">
+    <a href="/" class="text-2xl font-semibold tracking-wide text-white">Shendao</a>
+
+    <button
+      id="menu-toggle"
+      class="md:hidden rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-white"
+      type="button"
+    >
+      Меню
+    </button>
+
+    <div class="hidden items-center gap-8 md:flex text-sm text-white">
+      <a href="/" class="transition hover:text-sand-200">Начало</a>
+
+      <div class="group relative">
+        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+          За центъра
+          <span>▾</span>
+        </button>
+        <div class="invisible absolute left-0 top-full z-30 mt-3 w-56 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+          <a href="/about/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">За Shendao</a>
+          <a href="/contact/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Контакти</a>
+        </div>
       </div>
-    </nav>
+
+      <div class="group relative">
+        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+          Направления
+          <span>▾</span>
+        </button>
+        <div class="invisible absolute left-0 top-full z-30 mt-3 w-72 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+          <a href="/directions/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички направления</a>
+          <a href="/directions/medicine/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Древна китайска медицина</a>
+          <a href="/directions/taichi-qigong/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Тай-Чи и Цигун</a>
+          <a href="/directions/art/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Китайско изкуство</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+          Програми
+          <span>▾</span>
+        </button>
+        <div class="invisible absolute left-0 top-full z-30 mt-3 w-64 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+          <a href="/programs/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички програми</a>
+          <a href="/programs/cinet/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Програма ЦиНет</a>
+          <a href="/programs/dragon/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Пробуждането на дракона</a>
+        </div>
+      </div>
+
+      <a href="/schedule/" class="transition hover:text-sand-200">График</a>
+      <a href="/gallery/" class="transition hover:text-sand-200">Галерия</a>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="mt-4 hidden rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur md:hidden"
+  >
+    <div class="space-y-2 text-sm">
+      <a href="/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Начало</a>
+
+      <div class="rounded-xl border border-white/10 p-2">
+        <div class="px-3 py-2 font-semibold text-sand-200">За центъра</div>
+        <a href="/about/" class="block rounded-xl px-3 py-2 hover:bg-white/10">За Shendao</a>
+        <a href="/contact/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Контакти</a>
+      </div>
+
+      <div class="rounded-xl border border-white/10 p-2">
+        <div class="px-3 py-2 font-semibold text-sand-200">Направления</div>
+        <a href="/directions/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички направления</a>
+        <a href="/directions/medicine/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Древна китайска медицина</a>
+        <a href="/directions/taichi-qigong/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Тай-Чи и Цигун</a>
+        <a href="/directions/art/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Китайско изкуство</a>
+      </div>
+
+      <div class="rounded-xl border border-white/10 p-2">
+        <div class="px-3 py-2 font-semibold text-sand-200">Програми</div>
+        <a href="/programs/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички програми</a>
+        <a href="/programs/cinet/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Програма ЦиНет</a>
+        <a href="/programs/dragon/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Пробуждането на дракона</a>
+      </div>
+
+      <a href="/schedule/" class="block rounded-xl px-3 py-2 hover:bg-white/10">График</a>
+      <a href="/gallery/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Галерия</a>
+    </div>
+  </div>
+</nav>
 
     <div class="relative mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-10 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-16">
       <div class="flex flex-col justify-center">
@@ -399,6 +478,17 @@
       <div>Китайска култура • Древна китайска медицина • Цигун • Програми</div>
     </div>
   </footer>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
 
 </body>
 </html>
