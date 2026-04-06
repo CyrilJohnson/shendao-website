@@ -1,131 +1,133 @@
-<nav class="relative z-20 mx-auto max-w-7xl px-6 py-5 lg:px-8">
-  <div class="flex items-center justify-between">
-    <a href="/" class="text-2xl font-semibold tracking-wide text-white">Shendao</a>
+<header class="relative overflow-hidden bg-gradient-to-br from-sage-900 via-sage-800 to-sage-700 text-white">
+  <nav class="relative z-20 mx-auto max-w-7xl px-6 py-5 lg:px-8">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-semibold tracking-wide text-white">Shendao</a>
 
-    <button
-      id="menu-toggle"
-      class="md:hidden rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-white"
-      type="button"
+      <button
+        id="menu-toggle"
+        class="md:hidden rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-white"
+        type="button"
+      >
+        Меню
+      </button>
+
+      <div class="hidden items-center gap-8 md:flex text-sm text-white">
+        <a href="/" class="transition hover:text-sand-200">Начало</a>
+
+        <div class="group relative">
+          <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+            За центъра
+            <span>▾</span>
+          </button>
+          <div class="invisible absolute left-0 top-full z-30 mt-3 w-56 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+            <a href="/about/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">За Shendao</a>
+            <a href="/contact/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Контакти</a>
+          </div>
+        </div>
+
+        <div class="group relative">
+          <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+            Направления
+            <span>▾</span>
+          </button>
+          <div class="invisible absolute left-0 top-full z-30 mt-3 w-72 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+            <a href="/directions/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички направления</a>
+            <a href="/directions/medicine/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Древна китайска медицина</a>
+            <a href="/directions/taichi-qigong/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Тай-Чи и Цигун</a>
+            <a href="/directions/art/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Китайско изкуство</a>
+          </div>
+        </div>
+
+        <div class="group relative">
+          <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+            Програми
+            <span>▾</span>
+          </button>
+          <div class="invisible absolute left-0 top-full z-30 mt-3 w-64 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+            <a href="/programs/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички програми</a>
+            <a href="/programs/cinet/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Програма ЦиНет</a>
+            <a href="/programs/dragon/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Пробуждането на дракона</a>
+          </div>
+        </div>
+
+        <div class="group relative">
+          <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+            Организации
+            <span>▾</span>
+          </button>
+          <div class="invisible absolute left-0 top-full z-30 mt-3 w-80 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+            <a href="/organizations/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички организации</a>
+            <a href="/organizations/wushu-academy/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Българска У-Шу Академия</a>
+            <a href="/organizations/human-energy/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Институт по енергетика на човека</a>
+            <a href="/organizations/bulgarian-chinese-society/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Българо-китайско Дружество</a>
+            <a href="/organizations/chinese-medicine/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Център за китайска медицина</a>
+            <a href="/organizations/chinese-art/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Център за китайско изкуство</a>
+            <a href="/organizations/publishing/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Книгоиздателство</a>
+          </div>
+        </div>
+
+        <div class="group relative">
+          <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
+            Споделено
+            <span>▾</span>
+          </button>
+          <div class="invisible absolute left-0 top-full z-30 mt-3 w-64 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
+            <a href="/shared/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Истории и преживявания</a>
+          </div>
+        </div>
+
+        <a href="/schedule/" class="transition hover:text-sand-200">График</a>
+        <a href="/gallery/" class="transition hover:text-sand-200">Галерия</a>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="mt-4 hidden rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur md:hidden"
     >
-      Меню
-    </button>
+      <div class="space-y-2 text-sm">
+        <a href="/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Начало</a>
 
-    <div class="hidden items-center gap-8 md:flex text-sm text-white">
-      <a href="/" class="transition hover:text-sand-200">Начало</a>
-
-      <div class="group relative">
-        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
-          За центъра
-          <span>▾</span>
-        </button>
-        <div class="invisible absolute left-0 top-full z-30 mt-3 w-56 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
-          <a href="/about/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">За Shendao</a>
-          <a href="/contact/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Контакти</a>
+        <div class="rounded-xl border border-white/10 p-2">
+          <div class="px-3 py-2 font-semibold text-sand-200">За центъра</div>
+          <a href="/about/" class="block rounded-xl px-3 py-2 hover:bg-white/10">За Shendao</a>
+          <a href="/contact/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Контакти</a>
         </div>
-      </div>
 
-      <div class="group relative">
-        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
-          Направления
-          <span>▾</span>
-        </button>
-        <div class="invisible absolute left-0 top-full z-30 mt-3 w-72 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
-          <a href="/directions/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички направления</a>
-          <a href="/directions/medicine/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Древна китайска медицина</a>
-          <a href="/directions/taichi-qigong/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Тай-Чи и Цигун</a>
-          <a href="/directions/art/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Китайско изкуство</a>
+        <div class="rounded-xl border border-white/10 p-2">
+          <div class="px-3 py-2 font-semibold text-sand-200">Направления</div>
+          <a href="/directions/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички направления</a>
+          <a href="/directions/medicine/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Древна китайска медицина</a>
+          <a href="/directions/taichi-qigong/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Тай-Чи и Цигун</a>
+          <a href="/directions/art/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Китайско изкуство</a>
         </div>
-      </div>
 
-      <div class="group relative">
-        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
-          Програми
-          <span>▾</span>
-        </button>
-        <div class="invisible absolute left-0 top-full z-30 mt-3 w-64 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
-          <a href="/programs/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички програми</a>
-          <a href="/programs/cinet/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Програма ЦиНет</a>
-          <a href="/programs/dragon/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Пробуждането на дракона</a>
+        <div class="rounded-xl border border-white/10 p-2">
+          <div class="px-3 py-2 font-semibold text-sand-200">Програми</div>
+          <a href="/programs/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички програми</a>
+          <a href="/programs/cinet/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Програма ЦиНет</a>
+          <a href="/programs/dragon/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Пробуждането на дракона</a>
         </div>
-      </div>
 
-      <div class="group relative">
-        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
-          Организации
-          <span>▾</span>
-        </button>
-        <div class="invisible absolute left-0 top-full z-30 mt-3 w-80 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
-          <a href="/organizations/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Всички организации</a>
-          <a href="/organizations/wushu-academy/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Българска У-Шу Академия</a>
-          <a href="/organizations/human-energy/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Институт по енергетика на човека</a>
-          <a href="/organizations/bulgarian-chinese-society/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Българо-китайско Дружество</a>
-          <a href="/organizations/chinese-medicine/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Център за китайска медицина</a>
-          <a href="/organizations/chinese-art/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Център за китайско изкуство</a>
-          <a href="/organizations/publishing/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Книгоиздателство</a>
+        <div class="rounded-xl border border-white/10 p-2">
+          <div class="px-3 py-2 font-semibold text-sand-200">Организации</div>
+          <a href="/organizations/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички организации</a>
+          <a href="/organizations/wushu-academy/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Българска У-Шу Академия</a>
+          <a href="/organizations/human-energy/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Институт по енергетика на човека</a>
+          <a href="/organizations/bulgarian-chinese-society/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Българо-китайско Дружество</a>
+          <a href="/organizations/chinese-medicine/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Център за китайска медицина</a>
+          <a href="/organizations/chinese-art/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Център за китайско изкуство</a>
+          <a href="/organizations/publishing/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Книгоиздателство</a>
         </div>
-      </div>
 
-      <div class="group relative">
-        <button class="flex items-center gap-1 transition hover:text-sand-200" type="button">
-          Споделено
-          <span>▾</span>
-        </button>
-        <div class="invisible absolute left-0 top-full z-30 mt-3 w-64 rounded-2xl bg-white p-2 text-stone-800 opacity-0 shadow-soft transition-all group-hover:visible group-hover:opacity-100">
-          <a href="/shared/" class="block rounded-xl px-4 py-2 hover:bg-stone-100">Истории и преживявания</a>
+        <div class="rounded-xl border border-white/10 p-2">
+          <div class="px-3 py-2 font-semibold text-sand-200">Споделено</div>
+          <a href="/shared/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Истории и преживявания</a>
         </div>
-      </div>
 
-      <a href="/schedule/" class="transition hover:text-sand-200">График</a>
-      <a href="/gallery/" class="transition hover:text-sand-200">Галерия</a>
+        <a href="/schedule/" class="block rounded-xl px-3 py-2 hover:bg-white/10">График</a>
+        <a href="/gallery/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Галерия</a>
+      </div>
     </div>
-  </div>
-
-  <div
-    id="mobile-menu"
-    class="mt-4 hidden rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur md:hidden"
-  >
-    <div class="space-y-2 text-sm">
-      <a href="/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Начало</a>
-
-      <div class="rounded-xl border border-white/10 p-2">
-        <div class="px-3 py-2 font-semibold text-sand-200">За центъра</div>
-        <a href="/about/" class="block rounded-xl px-3 py-2 hover:bg-white/10">За Shendao</a>
-        <a href="/contact/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Контакти</a>
-      </div>
-
-      <div class="rounded-xl border border-white/10 p-2">
-        <div class="px-3 py-2 font-semibold text-sand-200">Направления</div>
-        <a href="/directions/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички направления</a>
-        <a href="/directions/medicine/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Древна китайска медицина</a>
-        <a href="/directions/taichi-qigong/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Тай-Чи и Цигун</a>
-        <a href="/directions/art/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Китайско изкуство</a>
-      </div>
-
-      <div class="rounded-xl border border-white/10 p-2">
-        <div class="px-3 py-2 font-semibold text-sand-200">Програми</div>
-        <a href="/programs/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички програми</a>
-        <a href="/programs/cinet/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Програма ЦиНет</a>
-        <a href="/programs/dragon/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Пробуждането на дракона</a>
-      </div>
-
-      <div class="rounded-xl border border-white/10 p-2">
-        <div class="px-3 py-2 font-semibold text-sand-200">Организации</div>
-        <a href="/organizations/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Всички организации</a>
-        <a href="/organizations/wushu-academy/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Българска У-Шу Академия</a>
-        <a href="/organizations/human-energy/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Институт по енергетика на човека</a>
-        <a href="/organizations/bulgarian-chinese-society/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Българо-китайско Дружество</a>
-        <a href="/organizations/chinese-medicine/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Център за китайска медицина</a>
-        <a href="/organizations/chinese-art/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Център за китайско изкуство</a>
-        <a href="/organizations/publishing/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Книгоиздателство</a>
-      </div>
-
-      <div class="rounded-xl border border-white/10 p-2">
-        <div class="px-3 py-2 font-semibold text-sand-200">Споделено</div>
-        <a href="/shared/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Истории и преживявания</a>
-      </div>
-
-      <a href="/schedule/" class="block rounded-xl px-3 py-2 hover:bg-white/10">График</a>
-      <a href="/gallery/" class="block rounded-xl px-3 py-2 hover:bg-white/10">Галерия</a>
-    </div>
-  </div>
-</nav>
+  </nav>
+</header>
